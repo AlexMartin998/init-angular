@@ -1,0 +1,14 @@
+<h1>DBZ Characters</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- [@input() CHILD]="propertyNamePARENT" -->
+    <dbz-list></dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- (onNewCharacter @Output() Child  -  onNewCharacter($event)) Parent <- $event es lo q emite el child -->
+    <dbz-add-character></dbz-add-character>
+  </div>
+</div>

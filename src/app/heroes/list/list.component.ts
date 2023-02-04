@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-heroes-list',
   templateUrl: './list.component.html',
 })
 export class ListComponent {
-  heroes: string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor', 'Saitama'];
-  deletedHero: string = '';
+  public heroNames: string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor'];
+  public deletedHero?: string;
 
-  deleteHeroByID(id: number) {
-    // this.heroes = this.heroes.filter((_item, i) => i !== id - 1);
-
-    this.deletedHero = this.heroes.pop() || '';
+  removeLasHero(): void {
+    this.deletedHero = this.heroNames.pop();
   }
 }
